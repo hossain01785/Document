@@ -1,0 +1,602 @@
+import turtle
+t = turtle.Pen()
+t.forward(50)
+t.left(104.47751218592992)
+t.forward(100)
+t.left(151.04497562814015)
+t.forward(100)
+-------------------
+#This is a program to use turtle i.e. uses of graphics in python
+import turtle
+t1 = turtle.Pen()
+t2 = turtle.Pen()
+t3 = turtle.Pen()
+t4 = turtle.Pen()
+
+t1.forward(100)
+t1.left(90)
+t1.forward(50)
+t1.right(90)
+t1.forward(50)
+t2.forward(110)
+t2.left(90)
+t2.forward(25)
+t2.right(90)
+t2.forward(40)
+t3.forward(110)
+t3.right(90)
+t3.forward(25)
+t3.left(90)
+t3.forward(40)
+t4.forward(100)
+t4.right(90)
+t4.forward(50)
+t4.left(90)
+t4.forward(50)
+------------------------------
+#Creating a triangle
+import math
+import turtle
+
+A = 100
+B = 100
+C = 50
+
+a = math.acos((math.pow(A, 2) + math.pow(C, 2) - math.pow(B, 2)) / (2*A*C))
+b = math.acos((math.pow(A, 2) + math.pow(B, 2) - math.pow(C, 2)) / (2*B*A))
+
+a = 180 - math.degrees(a)
+b = 180 - math.degrees(b)
+
+t = turtle.Pen()
+t.forward(C)
+t.left(a)
+t.forward(A)
+t.left(b)
+t.forward(B)
+----------------------
+# using of class
+
+class Animals:
+    def breathe(self):
+        print('breathing')
+    def move(self):
+        print('moving')
+    def eat_food(self):
+        print('eating food')
+class Mammals(Animals):
+    def feed_young_with_milk(self):
+        print('feeding young')
+class Giraffes(Mammals):
+    def eat_leaves_from_trees(self):
+        print('eating leaves')
+    def left_foot_forward(self):
+        print('left foot forward')
+    def right_foot_forward(self):
+        print('right foot forward')
+    def left_foot_backward(self):
+        print('left foot back')
+    def right_foot_backward(self):
+        print('right foot back')
+    def dance(self):
+        self.left_foot_forward()
+        self.left_foot_backward()
+        self.right_foot_forward()
+        self.right_foot_backward()
+        self.left_foot_backward()
+        self.right_foot_backward()
+        self.right_foot_forward()
+        self.left_foot_forward()
+reginald = Mammals()
+reginald.feed_young_with_milk()
+-----------------------
+#Calculating weight in moon
+
+import sys
+def moon_weight():
+    print('Please enter your current Earth weight')
+    weight = float(sys.stdin.readline())
+    print('Please enter the amount your weight might increase each year')
+    increase = float(sys.stdin.readline())
+    print('Please enter the number of years')
+    years = int(sys.stdin.readline())
+    years = years + 1
+    for year in range(1, years):
+        weight = weight + increase
+        moon_weight = weight * 0.165
+        print('Year %s is %s' % (year, moon_weight))
+moon_weight()
+------------------------------
+# finding what we can do with string
+
+string = ("Hello World. My name is MD. Abu Hasanat Soykot.")
+print(dir(string))
+string = ("Hello World. My name is MD. Abu Hasanat Soykot.")
+print(dir(string))
+--------------------------
+#Creating a box without any corner
+
+import turtle
+t = turtle.Pen()
+
+t.left(45)
+t.up()
+t.forward(50)
+t.down()
+t.left(45)
+t.forward(50)
+t.left(45)
+t.up()
+t.forward(50)
+t.down()
+t.left(45)
+t.forward(50)
+t.left(45)
+t.up()
+t.forward(50)
+t.down()
+t.left(45)
+t.forward(50)
+t.left(45)
+t.up()
+t.forward(50)
+t.down()
+t.left(45)
+t.forward(50)
+--------------------------------
+x = int(input())
+y = int(input())
+
+print(list(range(x, y+1)))
+---------------------------------
+age = int(input("Enter your age :"))
+age2 = age + 1
+
+print("Your age is %d"%age)
+print("After one year your age will be %d"%age2)
+---------------------------------
+a = int(input("Enter your age"))
+b = a + 1
+
+print("now you are {} year old and after one year you {}".format(a, b))
+-----------------------------.
+import turtle
+t = turtle.Pen()
+t.forward(120)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(120)
+t.left(90)
+t.forward(50)
+-----------------------
+a = int(input("Enter the first value of a arm :"))
+b = int(input("Enter the second value of another arm :"))
+c = int(input("Enter the third valur of the last arm :"))
+x = int(input("Please enter a value of a triangle :"))
+y = int(input("Please enter another value of a triangle :"))
+z = int(input("Please enter the value of the last angle of the triangle :"))
+
+
+li = [a, b, c]
+
+for i in li:
+    arm1 = max(a, b, c)
+    arm3 = min(a, b, c)
+    if i != arm1 and i != arm3:
+        arm2 = i
+
+if arm2+arm3>arm1:
+    if x + y + z == 180:
+        print("Yes")
+    else:
+        print("No")
+else:
+    print("No")
+---------------
+sub1 = "Bangla"
+sub2 = "English"
+sub3 = "Mathematics"
+ban = int(input("Enter marks in {} :".format(sub1)))
+eng = int(input("Enter marks in {} :".format(sub2)))
+math = int(input("Enter marks in {} :".format(sub3)))
+
+def check_marks(sub, marks):
+    if marks < 0:
+        print("{}\tInvalid".format(sub))
+    elif marks < 33:
+        print("{}\tF".format(sub))
+    elif marks < 40:
+        print("{}\tD".format(sub))
+    elif marks < 50:
+        print("{}\tC".format(sub))
+    elif marks < 60:
+        print("{}\tB".format(sub))
+    elif marks < 70:
+        print("{}\tA-".format(sub))
+    elif marks < 80:
+        print("{}\tA".format(sub))
+    elif marks <= 100:
+        print("{}\tA+".format(sub))
+    else:
+        print("{}\tInvalid".format(sub))
+check_marks(sub1, ban)
+check_marks(sub2, eng)
+check_marks(sub3, math)
+-------------------------------------
+#include<stdio.h>
+int main()
+{/* my first program in C */
+printf("Hello, World! \n");
+return0;
+}
+
+x=4 
+if x==	5:
+print("Its	5") 
+else:
+print("Its	not	5")
+------------------------
+def sum(a,b):
+    return a+b
+a=input("enter 1st number ")
+b=input("enter 2dn number ")
+z=(sum(int(x),int(y)))
+print("sum of two number is" z)
+-----------------
+import turtle
+
+turtle.bgcolor("black")
+turtle.pensize(2)
+
+def curve():
+    for i in range(200):
+        turtle.right(1)
+        turtle.forward(1)
+turtle.speed(0)
+turtle.color("red","red")
+
+turtle.begin_fill()
+turtle.left(140)
+turtle.forward(111.65)
+curve()
+
+turtle.left(120)
+curve()
+turtle.forward(111.65)
+turtle.end_fill()
+turtle.hideturtle()
+------------------------
+a = int(input("Enter the first value of a arm :"))
+b = int(input("Enter the second value of another arm :"))
+c = int(input("Enter the third valur of the last arm :"))
+x = int(input("Please enter a value of a triangle :"))
+y = int(input("Please enter another value of a triangle :"))
+z = int(input("Please enter the value of the last angle of the triangle :"))
+
+
+li = [a, b, c]
+
+for i in li:
+    arm1 = max(a, b, c)
+    arm3 = min(a, b, c)
+    if i != arm1 and i != arm3:
+        arm2 = i
+
+if arm2+arm3>arm1:
+    if x + y + z == 180:
+        print("Yes")
+    else:
+        print("No")
+else:
+    print("No")
+-----------------------
+# import turtle library
+import turtle             
+colors = [ "red","purple","blue","green","orange","yellow"]
+my_pen = turtle.Pen()
+turtle.bgcolor("black")
+for x in range(360):
+   my_pen.pencolor(colors[x % 6])
+   my_pen.width(x/100 + 1)
+   my_pen.forward(x)
+   my_pen.left(59)
+------------------------
+from turtle import *
+color('red', 'yellow')
+begin_fill()
+while True:
+    forward(200)
+    left(170)
+    if abs(pos()) < 1:
+        break
+end_fill()
+done()
+-------------------
+import turtle
+t = turtle.Pen()
+t.forward(120)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(120)
+t.left(90)
+t.forward(50)
+------------------------
+#Converting temperature in kalvin and farenheit from celcius
+C = float(input("Enter temperature in celcius :"))
+
+F = ((C*9)/5)+32
+K = C + 273
+
+print("This temperature in farenheit is {} and in kalvin is {}".format(F, K))
+--------------------------
+#counting odd number
+x=int(input("please enter a starting number : "))
+y=int(input("please enter a finishing number : "))
+num = x
+while num !=y+1:
+    if num %2 != 0:
+        print(num)
+    num += 1
+----------------------------------
+#counting even number
+x=int(input("please enter a starting number : "))
+y=int(input("please enter a finishing number : "))
+num = x
+while num !=y+1:
+    if num %2 == 0:
+        print(num)
+    num += 1
+--------------------
+Exchange the value
+a=int(input("enter value of first varible: "))
+b=int(input("enter value of second varible: "))
+a=a+b
+b=a-b
+a=a-b
+print("a is:",a,"b is:",b)
+---------------------------
+#testing a number
+x=int(input("input anumber:"))
+if x==10:
+    print("this number is 10")
+elif x<10:
+    print("this number less then 10")
+if x==30:
+    print("this number is 30")
+elif x<30:
+    print("this number less then 30")
+if x==50:
+    print("this number is 50")
+elif x<50:
+    print("this number less then50")
+---------------------
+a = int(input("Enter your age"))
+b = a + 1
+
+print("now you are {} year old and after one year you {}".format(a, b))
+----------------
+x=int(input("input a starting number:"))
+y=int(input("input a finishing number:"))
+num = x
+while num !=y+1:
+ print(num)
+ num += 1
+-------------------------
+x=int(input("Input a starting number :"))
+y=int(input("Input a finishing number :"))
+num = x
+
+while num !=y:
+    print(num)
+    num += 1
+---------------------
+#testing a number
+x = int(input("please input a number :"))
+if x == 10:
+    print("This number is 10")
+elif x < 10:
+    print("This is less than 10")
+elif x == 30:
+    print("This number is 30")
+elif x < 30:
+    print("This is less than 30")
+elif x == 50:
+    print("This number is 50")
+elif x < 50:
+    print("This is less than 50")
+else:
+    print("This number is out of range")
+------------------------------
+What's the problem #Decision control
+print("wellcome, This is number guessing game and no is in b/w 1 and 10")
+x=input("guess the number")#if statement
+x=input (x)
+if (x==4):
+    print ("your guess is right , greeat , you win")
+if (x!=4):
+    print ("oops,your guess is wrong")
+------------------------
+#decsion cotrol
+print("wellcome, this is number guessing game and on in b/w 1 and 10")
+x=input("guess the number ")
+x=int(x)
+if (x==4):
+    print("your guess is right, cogratulation")
+if(x!=4):
+    print("opps, your guess is wrong")
+-----------------------------------
+# procedure # + take input more number
+def sum (a,b):
+    return (a+b)
+print(sum(1,9))
+def multiply (a,b):
+    return (a*b)
+print(multiply(6,7))
+def sub (a,b):
+    return(a-b)
+print(sub(9,7))
+def dif (a,b):
+    return(a/b)
+print(dif(99,11))
+------------------
+# procedure # + take input more number
+def jog (a,b):
+    return (a+b)
+print(jog(9,10))
+def gun(x,y):
+    return (x*y)
+print(gun(9,10))
+def biyog (c,d):
+    return (c-d)
+print(biyog(25,12))
+def vag (e,f):
+    return (e/f)
+print(vag(25,5))
+------------------------
+#proceduer # + take input more number
+def sum(a,b,c,d,e,):
+    return a+b+c+d+e
+print(sum(1,2,3,4,5))
+
+def multiply(a,b):
+    return a*b
+print(multiply(4,6))
+
+def sub(a,b):
+    return a-b
+print(sub(5,6))
+
+def dif(a,b):
+    return a/b
+print(dif(10,5))
+----------------------------
+#procedure # + take input more number
+def multiply(a,b):
+    return a*b
+a=int(input("enter a new number"))
+b=int(input("enter a another number"))
+print(multiply(a,b))
+--------------
+print("hello baby")
+x=input("what is your name")
+print("x"+"lenght of your name is"+ str(len(x)))
+y=input("what is your age")
+print(("you will be")+str(int(y)+1)+("in a year"))
+---------------------
+print("hello! baby")
+x=input("what is your name")
+print(x+" lenght of your name is " + str(len(x)) )
+y=input("what is your age")
+print(("you will be ") + str(int(y)+1) + (" in a year") )
+----------------------------------------
+name = input("Enter your name :")
+print("There is {} characters in your name".format(len(name)))
+print('hello Rani')
+x=input("what is your name?")
+print("hello nice to meet you"+x)
+-------------------------
+name = input("Hello World...Please enter your name :")
+gender = input("Are you 'Male' or 'Female'?")
+if gender == 'Male':
+    gen = "Mr."
+elif gender == 'Female':
+    gen = "Ms."
+
+greeting = input("Hello {0} {1}.\nHow are you {0} {1}?".format(gen, name))
+
+fin = greeting.find("no" or "not")
+
+if fin == -1:
+    print("Nice to meet you {} {}".format(gen, name))
+else:
+    print("I feel so sad to hear this {} {}".format(gen, name))
+-------------------------
+print('hello!')
+x=input("what is your name")
+print("nice too meet you"+x)
+----------------------------
+step_com=int(input())
+step=int(input())
+back=int(input())
+cal=(step_com/step)*back
+print(int(cal))
+---------------------
+# Python Program to find LCM of n elements 
+  
+def find_lcm(num1, num2): 
+    if(num1>num2): 
+        num = num1 
+        den = num2 
+    else: 
+        num = num2 
+        den = num1 
+    rem = num % den 
+    while(rem != 0): 
+        num = den 
+        den = rem 
+        rem = num % den 
+    gcd = den 
+    lcm = int(int(num1 * num2)/int(gcd)) 
+    return lcm 
+      
+l = [2, 7, 3, 9, 4] 
+  
+num1 = l[0] 
+num2 = l[1] 
+lcm = find_lcm(num1, num2) 
+  
+for i in range(2, len(l)): 
+    lcm = find_lcm(lcm, l[i]) 
+----------------------------------------
+def find_gcd(x, y): 
+    while(y): 
+        x, y = y, x % y 
+  
+    return x 
+      
+      
+l = [2, 4, 6, 8, 16] 
+  
+num1=l[0] 
+num2=l[1] 
+gcd=find_gcd(num1,num2) 
+  
+for i in range(2,len(l)): 
+    gcd=find_gcd(gcd,l[i]) 
+      
+print(gcd)
+---------------------------------
+a=int(input("Enter the value of a arm of a triangle :"))
+b=int(input("Enter the value of another arm of a triangle :"))
+c=int(input("Enter the value of one more arm of a triangle :"))
+
+circum=a+b+c
+print(circum)
+---------------------------
+step_com=int(input("Enter the total steps of pondith's gf that is commanded:"))
+step=int(input("Enter the total steps of pondith's gf :"))
+back=int(input("Enter the backward steps of pondith gf :"))
+cal=(step_com/step)*back
+print(int(cal))
+-------------------------
+num1 = int(input("Enter a number :"))
+num2 = int(input("Enter another number :"))
+sumtotal = num1 + num2
+sub = num1 - num2
+mul = num1 * num2
+div = num1 / num2
+print(sumtotal)
+print(sub)
+print(mul)
+print(div)
+------------------------------
+pondith_gf_number = int(input("Enter the number of GF of pondith :"))
+total_number_of_bf_of_gfs = int(input("Enter the total number of BF of the {} GF :".format(pondith_gf_number)))
+
+my_var1 = total_number_of_bf_of_gfs - 1
+my_var2 = my_var1 / pondith_gf_number
+evry_gf_has_bf = int(my_var2 + 1)
+
+print("Every GF has {} BF".format(evry_gf_has_bf))
