@@ -1,0 +1,45 @@
+1. drawing a isosceles triangle
+2. making a diagram using turtle
+3. making a trianle using turtle with 3 arms
+4. uses of class and function
+5. simple calculations (calculating mass in moon)
+6. uses of dir function
+7. creating a box without any corner using turtle
+8. making a list of number using range function
+9. string and integer operation
+10. creating a equilateral triangle using turtle
+11. testing that a triangle will be or not will be using correct proportion of arms and angles
+12. check grade points
+13. my first program in C
+14. using condition
+15. making a function
+16. drawing a heart using turtle
+17. [same as 11]
+18. making a design using turtle
+19. making another design using turtle
+20. creaing a rectangle
+21. conveting temperature
+22. counting odd numbers in a range
+23. counting even numbers in a range
+24. updating variables
+25. finding a number using condition
+26. [same as 9]
+27. printing numbers in a range (using while loop)
+28. [same as 27]
+29. [same as 25]
+30. [same as 14]
+31. [same as 15]
+32. [same as 15]
+33. [same as 15]
+34. [same as 15]
+35. [same as 9]
+36. [same as 9]
+37. creating interactivity using conditions
+38. printing strings
+39. simple mathematics
+40. LCM and GCD
+41. GCD
+42. circumstances of a triangle
+43. perimeter of a triangle
+44. integer operation
+45. mathematics of pondith and his gf
