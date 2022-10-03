@@ -1,0 +1,405 @@
+1. drawing a isosceles triangle ?
+
+
+import turtle
+t = turtle.Pen()
+t.forward(50)
+t.left(104.47751218592992)
+t.forward(100)
+t.left(151.04497562814015)
+t.forward(100)
+
+........................................
+2. making a diagram using turtle ?
+
+
+#This is a program to use turtle i.e. uses of graphics in python
+import turtle
+t1 = turtle.Pen()
+t2 = turtle.Pen()
+t3 = turtle.Pen()
+t4 = turtle.Pen()
+
+t1.forward(100)
+t1.left(90)
+t1.forward(50)
+t1.right(90)
+t1.forward(50)
+t2.forward(110)
+t2.left(90)
+t2.forward(25)
+t2.right(90)
+t2.forward(40)
+t3.forward(110)
+t3.right(90)
+t3.forward(25)
+t3.left(90)
+t3.forward(40)
+t4.forward(100)
+t4.right(90)
+t4.forward(50)
+t4.left(90)
+t4.forward(50)
+------------------------------
+3. making a trianle using turtle with 3 arms ?
+
+#Creating a triangle
+import math
+import turtle
+
+A = 100
+B = 100
+C = 50
+
+a = math.acos((math.pow(A, 2) + math.pow(C, 2) - math.pow(B, 2)) / (2*A*C))
+b = math.acos((math.pow(A, 2) + math.pow(B, 2) - math.pow(C, 2)) / (2*B*A))
+
+a = 180 - math.degrees(a)
+b = 180 - math.degrees(b)
+
+t = turtle.Pen()
+t.forward(C)
+t.left(a)
+t.forward(A)
+t.left(b)
+t.forward(B)
+----------------------
+4. uses of class and function ?
+
+# using of class
+
+class Animals:
+    def breathe(self):
+        print('breathing')
+    def move(self):
+        print('moving')
+    def eat_food(self):
+        print('eating food')
+class Mammals(Animals):
+    def feed_young_with_milk(self):
+        print('feeding young')
+class Giraffes(Mammals):
+    def eat_leaves_from_trees(self):
+        print('eating leaves')
+    def left_foot_forward(self):
+        print('left foot forward')
+    def right_foot_forward(self):
+        print('right foot forward')
+    def left_foot_backward(self):
+        print('left foot back')
+    def right_foot_backward(self):
+        print('right foot back')
+    def dance(self):
+        self.left_foot_forward()
+        self.left_foot_backward()
+        self.right_foot_forward()
+        self.right_foot_backward()
+        self.left_foot_backward()
+        self.right_foot_backward()
+        self.right_foot_forward()
+        self.left_foot_forward()
+reginald = Mammals()
+reginald.feed_young_with_milk()
+-----------------------
+5. simple calculations (calculating mass in moon) ?
+
+#Calculating weight in moon
+
+import sys
+def moon_weight():
+    print('Please enter your current Earth weight')
+    weight = float(sys.stdin.readline())
+    print('Please enter the amount your weight might increase each year')
+    increase = float(sys.stdin.readline())
+    print('Please enter the number of years')
+    years = int(sys.stdin.readline())
+    years = years + 1
+    for year in range(1, years):
+        weight = weight + increase
+        moon_weight = weight * 0.165
+        print('Year %s is %s' % (year, moon_weight))
+moon_weight()
+------------------------------
+6. uses of dir function ?
+
+# finding what we can do with string
+
+string = ("Hello World. My name is MD. Abu Hasanat Soykot.")
+print(dir(string))
+string = ("Hello World. My name is MD. Abu Hasanat Soykot.")
+print(dir(string))
+--------------------------
+
+7. creating a box without any corner using turtle ?
+
+#Creating a box without any corner
+
+import turtle
+t = turtle.Pen()
+
+t.left(45)
+t.up()
+t.forward(50)
+t.down()
+t.left(45)
+t.forward(50)
+t.left(45)
+t.up()
+t.forward(50)
+t.down()
+t.left(45)
+t.forward(50)
+t.left(45)
+t.up()
+t.forward(50)
+t.down()
+t.left(45)
+t.forward(50)
+t.left(45)
+t.up()
+t.forward(50)
+t.down()
+t.left(45)
+t.forward(50)
+
+--------------------------------
+
+8. making a list of number using range function ?
+
+x = int(input())
+y = int(input())
+
+print(list(range(x, y+1)))
+---------------------------------
+9. string and integer operation ?
+
+a = int(input("Enter your age"))
+b = a + 1
+
+print("now you are {} year old and after one year you {}".format(a, b))
+---------------------------------
+10. creating a equilateral triangle using turtle ?
+
+import turtle
+t = turtle.Pen()
+t.forward(120)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(120)
+t.left(90)
+t.forward(50)
+-----------------------
+
+11. testing that a triangle will be or not will be using correct proportion of arms and angles ?
+
+
+
+
+
+
+
+12. check grade points ?
+
+
+sub1 = "Bangla"
+sub2 = "English"
+sub3 = "Mathematics"
+ban = int(input("Enter marks in {} :".format(sub1)))
+eng = int(input("Enter marks in {} :".format(sub2)))
+math = int(input("Enter marks in {} :".format(sub3)))
+
+def check_marks(sub, marks):
+    if marks < 0:
+        print("{}\tInvalid".format(sub))
+    elif marks < 33:
+        print("{}\tF".format(sub))
+    elif marks < 40:
+        print("{}\tD".format(sub))
+    elif marks < 50:
+        print("{}\tC".format(sub))
+    elif marks < 60:
+        print("{}\tB".format(sub))
+    elif marks < 70:
+        print("{}\tA-".format(sub))
+    elif marks < 80:
+        print("{}\tA".format(sub))
+    elif marks <= 100:
+        print("{}\tA+".format(sub))
+    else:
+        print("{}\tInvalid".format(sub))
+check_marks(sub1, ban)
+check_marks(sub2, eng)
+check_marks(sub3, math)
+-------------------------------------
+
+13. my first program in C ?
+
+#include<stdio.h>
+int main()
+{/* my first program in C */
+printf("Hello, World! \n");
+return0;
+}
+
+x=4 
+if x==	5:
+print("Its	5") 
+else:
+print("Its	not	5")
+------------------------
+14. using condition ?
+
+def sum(a,b):
+    return a+b
+a=input("enter 1st number ")
+b=input("enter 2dn number ")
+z=(sum(int(x),int(y)))
+print("sum of two number is" z)
+-----------------
+15. making a function
+
+a = int(input("Enter the first value of a arm :"))
+b = int(input("Enter the second value of another arm :"))
+c = int(input("Enter the third valur of the last arm :"))
+x = int(input("Please enter a value of a triangle :"))
+y = int(input("Please enter another value of a triangle :"))
+z = int(input("Please enter the value of the last angle of the triangle :"))
+
+
+li = [a, b, c]
+
+for i in li:
+    arm1 = max(a, b, c)
+    arm3 = min(a, b, c)
+    if i != arm1 and i != arm3:
+        arm2 = i
+
+if arm2+arm3>arm1:
+    if x + y + z == 180:
+        print("Yes")
+    else:
+        print("No")
+else:
+    print("No")
+-----------------------
+
+16. drawing a heart using turtle ??
+
+import turtle
+
+turtle.bgcolor("black")
+turtle.pensize(2)
+
+def curve():
+    for i in range(200):
+        turtle.right(1)
+        turtle.forward(1)
+turtle.speed(0)
+turtle.color("red","red")
+
+turtle.begin_fill()
+turtle.left(140)
+turtle.forward(111.65)
+curve()
+
+turtle.left(120)
+curve()
+turtle.forward(111.65)
+turtle.end_fill()
+turtle.hideturtle()
+------------------------
+17. [same as 11]
+
+------------------------
+
+18. making a design using turtle ?
+
+# import turtle library
+import turtle             
+colors = [ "red","purple","blue","green","orange","yellow"]
+my_pen = turtle.Pen()
+turtle.bgcolor("black")
+for x in range(360):
+   my_pen.pencolor(colors[x % 6])
+   my_pen.width(x/100 + 1)
+   my_pen.forward(x)
+   my_pen.left(59)
+------------------------
+19. making another design using turtle ?
+
+from turtle import *
+color('red', 'yellow')
+begin_fill()
+while True:
+    forward(200)
+    left(170)
+    if abs(pos()) < 1:
+        break
+end_fill()
+done()
+-------------------
+20. creaing a rectangle ?
+
+import turtle
+t = turtle.Pen()
+t.forward(120)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(120)
+t.left(90)
+t.forward(50)
+------------------------
+
+21. conveting temperature ? 
+
+
+#Converting temperature in kalvin and farenheit from celcius
+C = float(input("Enter temperature in celcius :"))
+
+F = ((C*9)/5)+32
+K = C + 273
+
+print("This temperature in farenheit is {} and in kalvin is {}".format(F, K))
+--------------------------
+22. counting odd numbers in a range ? 
+
+
+#counting odd number
+x=int(input("please enter a starting number : "))
+y=int(input("please enter a finishing number : "))
+num = x
+while num !=y+1:
+    if num %2 != 0:
+        print(num)
+    num += 1
+----------------------------------
+
+23. counting even numbers in a range ?
+
+
+#counting even number
+x=int(input("please enter a starting number : "))
+y=int(input("please enter a finishing number : "))
+num = x
+while num !=y+1:
+    if num %2 == 0:
+        print(num)
+    num += 1
+--------------------
+ 
+24. updating variables ?
+
+Exchange the value
+a=int(input("enter value of first varible: "))
+b=int(input("enter value of second varible: "))
+a=a+b
+b=a-b
+a=a-b
+print("a is:",a,"b is:",b)
+---------------------------
+
+25. finding a number using condition ?
+
+
